@@ -1,11 +1,13 @@
 function getComputerChoice() {
-    const num = Math.floor(Math.random() * 100);
-    if (num < 33) {
-        return "Rock";
-    } else if (num < 66) {
-        return "Paper";
-    } else {
-        return "Scissors";
+    const num = Math.floor(Math.random() * 3) + 1;
+    console.log(num); // NOTE: used for debugging
+    switch (num) {
+        case 1:
+            return "Rock";
+        case 2:
+            return "Paper";
+        case 3:
+            return "Scissors";
     }
 }
 
