@@ -12,6 +12,17 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+function getPlayerChoice() {
+    let userInput = prompt(
+        "Choose 'Rock', 'Paper' or 'Scissors': "
+    ).toLowerCase();
+
+    let capitalizeFirstLetter = userInput.charAt(0).toUpperCase();
+    const playerSelection = capitalizeFirstLetter + userInput.slice(1);
+
+    return playerSelection;
+}
+
     console.log("computerSelection: " + computerSelection); // NOTE: used for debugging
     console.log("playerSelection: " + playerSelection); // NOTE: used for debugging
 
@@ -54,3 +65,4 @@ function playRound(playerSelection, computerSelection) {
 }
 
 console.log(playRound("Rock", getComputerChoice()));
+console.log(playRound(getPlayerChoice(), getComputerChoice()));
