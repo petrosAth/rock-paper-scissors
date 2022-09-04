@@ -87,7 +87,9 @@ function game() {
         resultStatement = "It's a Tie";
     }
 
-    console.log(`The final score is: ${score.player}-${score.computer} - ${resultStatement}!`);
+    console.log(
+        `The final score is: ${score.player}-${score.computer} - ${resultStatement}!`
+    );
 }
 
 game();
