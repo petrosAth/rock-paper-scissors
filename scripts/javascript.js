@@ -24,7 +24,7 @@ function getPlayerChoice() {
 function playRound(playerSelection, computerSelection, score) {
     const winMsg = `You Win! ${playerSelection} wins ${computerSelection}`;
     const loseMsg = `You Lose! ${computerSelection} wins ${playerSelection}`;
-    const tieMsg = `Tie!`;
+    const tieMsg = `Tie! You both picked ${playerSelection}`;
 
     switch (computerSelection) {
         case "Rock":
@@ -69,6 +69,7 @@ function playRound(playerSelection, computerSelection, score) {
 }
 
 function game() {
+    let resultStatement = "";
     const score = {
         player: 0,
         computer: 0,
@@ -79,12 +80,14 @@ function game() {
     }
 
     if (score.player > score.computer) {
-        console.log(`The final score is: ${score.player}-${score.computer} - You Won!`);
+        resultStatement = "You Won";
     } else if (score.player < score.computer) {
-        console.log(`The final score is: ${score.player}-${score.computer} - You Lose!`);
+        resultStatement = "You Lose";
     } else {
-        console.log(`The final score is: ${score.player}-${score.computer} - It's a Tie!`);
+        resultStatement = "It's a Tie";
     }
+
+    console.log(`The final score is: ${score.player}-${score.computer} - ${resultStatement}!`);
 }
 
 game();
