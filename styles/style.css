@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0 auto;
+}
+
+div.score {
+  display: flex;
+  justify-content: center;
+  padding: 5% 30%;
+  gap: 32px;
+}
+
+div #playerScore, #computerScore {
+  border: 8px solid blue;
+  border-radius: 16px;
+  flex-basis: 40%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+div.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+div.buttons button {
+  font-size: 32px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 16px;
+}
+
+p.scoreValue {
+  font-size: 128px;
+}
