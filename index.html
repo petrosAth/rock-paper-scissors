@@ -6,26 +6,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="./styles/style.css" rel="stylesheet" />
-  <!-- <script src="./scripts/javascript.js" defer></script> -->
+  <script src="https://kit.fontawesome.com/9236152b7e.js" crossorigin="anonymous"></script>
+  <script src="./scripts/javascript.js" defer></script>
 </head>
 
 <body>
-  <div class="score">
-    <div id="playerScore">
-      <p class="scoreLabel" id="playerScoreLabel">Your Score</p>
-      <p class="scoreValue" id="playerScoreValue">1</p>
-    </div>
-    <div id="computerScore">
-      <p class="scoreLabel" id="computerScoreLabel">Computer Score</p>
-      <p class="scoreValue" id="computerScoreValue">9</p>
-    </div>
-  </div>
   <div class="buttons">
-    <button type="button">Rock</button>
-    <button type="button">Paper</button>
-    <button type="button">Scissors</button>
+    <button id="Rock" class="pickButton" type="button">Rock</button>
+    <button id="Paper" class="pickButton" type="button">Paper</button>
+    <button id="Scissors" class="pickButton" type="button">Scissors</button>
+    <button class="resetButton" type="button">Play Again!</button>
   </div>
-  <div class="score-table"></div>
+  <div class="gamePreview">
+    <div class="picks">
+      <div class="indicatorTable pickTable playerPick">
+        <p class="pickLabel">Player Pick</p>
+        <br />
+        <i id="playerPickIcon" class="fa-solid fa-minus"></i>
+      </div>
+      <div class="indicatorTable pickTable pickResult">
+        <p id="picksResultValue">&nbsp;</p>
+      </div>
+      <div class="indicatorTable pickTable computerPick">
+        <p class="pickLabel">Computer Pick</p>
+        <br />
+        <i id="computerPickIcon" class="fa-solid fa-minus"></i>
+      </div>
+    </div>
+    <div class="score">
+      <div class="indicatorTable scoreTable playerScore">
+        <p class="scoreLabel">Player Score</p>
+        <p class="scoreValue" id="playerScoreValue">0</p>
+      </div>
+      <div class="indicatorTable scoreTable computerScore">
+        <p class="scoreLabel">Computer Score</p>
+        <p class="scoreValue" id="computerScoreValue">0</p>
+      </div>
+    </div>
+    <div class="result"></div>
+  </div>
 </body>
 
 </html>
